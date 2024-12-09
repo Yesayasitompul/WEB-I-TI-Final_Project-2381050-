@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/ba0c18136f.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/slideshowLogic.js"></script>
+	<title>Beranda | Seleksi Nasional Penerimaan Mahasiswa Baru</title>	
+	<link rel="icon" href="tutwuri.jpg">
+
+  <style> 
+    @keyframes scroll-text {
+        0% {
+            transform: translateX(500%);
+        }
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+    </style>
+</head>
+<body class="bg-white bg-[url('src/img/homepagebg.jpg')] bg-[50%_100%] bg-no-repeat bg-cover bg-fixed">
+  <aside class="absolute h-full z-10">
+    <input type="checkbox" id="sidebar-toggle" class="hidden peer" />
+    <div class="fixed top-0 left-0 h-full w-[400px] bg-gray-100 text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50 peer-checked:shadow-[5px_0px_100px_rgb(200,200,200,0.45)]">
+    <ul class="mt-8 space-y-4 text-lg w-[90%] mx-auto">
+        <li><h2 class="text-black text-2xl border-b-[3px] border-solid border-[#2e5c98] font-semibold w-fit pr-3 ml-6 pb-2">Menu</h2></li>
+        <li><input class="w-[95%] ml-2 pl-3 py-2 rounded-sm my-4" type="text" name="search" id="search" placeholder="Search..."></li>
+        <li class="px-6 py-2 cursor-pointer text-[#2e5c98] font-semibold border-b-[1px] border-solid border-[#2e5c98]"><a href="index.html">Beranda</a></li>
+        <li class="px-6 py-2 cursor-pointer text-black"><a href="biodata.html">Biodata</a></li>
+        <li class="px-6 py-2 cursor-pointer text-black"><a href="contact_us.html">Contact Us</a></li>
+        <li class="px-6 py-2 cursor-pointer text-black"><a href="mypleasure.html">My Pleasure</a></li>
+			  <li class="px-6 py-2 cursor-pointer text-black"><a href="post.html">Post</a></li>
+        <li class="px-6 py-2 cursor-pointer text-black">Jadwal</li>
+        <li class="px-6 py-2 cursor-pointer text-black">Unduhan</li>
+        <li class="px-6 py-2 cursor-pointer text-black">Info Terkini</li>
+        <li class="px-6 py-2 cursor-pointer text-black">FAQ</li>
+        <li class="px-6 py-2 cursor-pointer text-black">Tautan</li>
+    </ul>
+    </div>
+
+    <div class="ml-0 peer-checked:ml-[420px] transition-all duration-300 pt-10">
+    <label for="sidebar-toggle" class="p-6 bg-transparent text-[#2e5c98] font-semibold text-4xl scale-50 m-4 rounded cursor-pointer">☰</label>
+    </div>
+  </aside>
+
+  
+	<main class="max-w-[86%] mx-auto">
+		<section class="top">
+    <div class="logo-container flex justify-between flex-col lg:flex-row w-fit lg:w-full mx-auto">
+        <a href="#" class="img-container">
+            <img src="src/img/snpmb.jpg" alt="logo snpmb" class="mt-14 w-52">
+        </a>
+        <a href="#" class="img-container">
+            <img src="src/img/snbp.jpg" alt="logo snbt" class="mt-14 w-52">
+        </a>
+    </div>
+    <div class="relative w-full h-[50px] whitespace-nowrap bg-[#2e5c98] py-4 overflow-hidden text-white font-medium">
+        <p class="inline-block relative animate-[scroll-text_9s_linear_infinite]">Laman Resmi Seleksi Nasional Penerimaan Mahasiswa Baru</p>
+    </div>
+</section>
+
+<div class="relative">
+  <div class="slide-container relative mx-auto">
+    <button class="left-btn absolute top-1/2 left-2 transform -translate-y-1/2 p-2 text-xl text-black rounded-full"><i class="fa-solid fa-angle-left border-b-[1px] border-dashed py-5 pl-3 rounded-br-sm  border-black"></i></button>
+    <img src="" alt="Slide" class="w-full h-auto rounded block " />
+    <button class="right-btn absolute top-1/2 right-2 transform -translate-y-1/2 p-2 text-xl text-black "><i class="fa-solid fa-angle-right border-b-[1px] border-dashed py-5 pl-3 rounded-bl-sm  border-black"></i></button>
+  </div>
+
+  <div class="bullets-wrapper flex gap-2 max-w-fit mx-auto pt-4">
+    <a href="#" class="p-2 bg-gray-400 rounded-full transition-colors duration-300"></a>
+    <a href="#" class="p-2 bg-gray-400 rounded-full transition-colors duration-300"></a>
+    <a href="#" class="p-2 bg-gray-400 rounded-full transition-colors duration-300"></a>
+  </div>
+</div>
+
+
+
+  <section class="bottom my-6 flex flex-col gap-5 mb-20">
+    <h2 class="text-center text-3xl font-semibold">Info Terkini</h2>
+    <div class="wrapper flex flex-col gap-5">
+      
+      <a href="#" class="flex flex-col  h-fit items-center gap-5 p-5 px-12 lg:h-[220px] lg:flex-row bg-white rounded-xl shadow-[0px_5px_8px_rgb(100,100,100,0.45)] text-gray-700">
+        <img src="src/img/statistik.jpg" alt="statistiknilaiUTBK2024" class="w-[185px] h-[180px]">
+        <div class="flex flex-col gap-2 mb-16">
+          <h3 class="font-semibold text-2xl">Statistik Nilai Peserta UTBK 2024</h3>
+          <h6 class="text-sm">Diunggah pada 27 June 2024</h6>
+          <p class="text-lg text-black">Hasil kelulusan seleksi jalur SNBT baru saja diumumkan pada 13 Juni 2024. Dari total peserta UTBK-SNBT 2024 sebanyak 785.058 orang, yang lulus SNBT sebanyak 231.104 orang atau sekitar 30%. Sebagaimana telah diketahui, bahwa s...</p>
+        </div>
+      </a>
+
+      <a href="#" class="flex flex-col  h-fit items-center gap-5 p-5 px-12 lg:h-[220px] lg:flex-row bg-white rounded-xl shadow-[0px_5px_8px_rgb(100,100,100,0.45)] text-gray-700">
+        <img src="src/img/poster.jpg" alt="advertisement" class="w-[185px] h-[180px]">
+        <div class="flex flex-col  gap-2 mb-16 ml-10">
+          <h3 class="font-semibold text-2xl">Pemberian Kesempatan Permanen Akun SNPMB bagi Siswa</h3>
+          <h6 class="text-sm">Diunggah pada 22 February 2024</h6>
+          <p class="text-lg text-black">Siaran Pers No. 03/sipers/snpmb/II/2024 tentang Pemberian Kesempatan Permanen Akun SNPMB bagi Siswa.</p>
+          <p class="text-lg text-black">Sehubungan dengan telah selesainya periode Registrasi Akun SNPMB Siswa pada tanggal 19 Februari 2024, pukul 15.00 WIB, kam...</p>
+        </div>
+      </a>
+
+      <a href="#" class="flex flex-col  h-fit items-center gap-5 p-5 px-12 lg:h-[220px] lg:flex-row bg-white rounded-xl shadow-[0px_5px_8px_rgb(100,100,100,0.45)] text-gray-700">
+        <img src="src/img/poster2.jpg" alt="advertisement" class="w-[185px] h-[180px]">
+        <div class="flex flex-col gap-2 mb-16 ml-10">
+          <h3 class="font-semibold text-2xl">Pemberian Kesempatan Registrasi dan Permanen Akun SNPMB bagi Siswa</h3>
+          <h6 class="text-sm">Diunggah pada 15 February 2024</h6>
+          <p class="text-lg text-black">Siaran Pers No. 02/sipers/snpmb/II/2024 tentang Pemberian Kesempatan Registrasi dan Permanen Akun SNPMB bagi Siswa.</p>
+          <p class="text-lg text-black">Registrasi akun SNPMB bagi siswa telah diadakan dari 8 Januari 2024 sampai dengan 15 Februari 2024. Namun,...</p>
+        </div>
+      </a>
+    </div>
+    <a href="#" class="info text-2xl italic font-semibold text-black no-underline text-right">Info sebelumnya....</a>
+  </section>
+	</main>
+
+
+	<footer class="bg-[#2e5c98] border-t border-solid border-[blue] py-2">
+    <div class="footer-content container mx-auto grid grid-cols-1 grid-rows-5 h-40 lg:h-32 justify-center text-center text-white">
+        <h3 class="text-xl font-medium">Seleksi Nasional Penerimaan Mahasiswa Baru</h3>
+        <p class="text-[12px]">Gedung D lt.2, Kemdikbudristek Jl. Pintu I Senayan, Jakarta 10270</p>
+        <p class="text-[12px]">Telp. (021) 3104041 Email: snpmb@bppp.kemdikbud.go.id; halo-snpmb@bppp.kemdikbud.go.id</p>
+        <a href="#" class="kebijakan text-white text-xs underline decoration-dotted">Kebijakan Privasi</a>
+        <div class="logo-wrapper flex justify-center gap-3">
+            <a href="https://x.com/snpmb_bppp?mx=2"><img src="src/img/x.jpg" alt="logo instagram" class="w-6 rounded-full"></a>
+            <a href="https://fti.unai.edu/"><img src="src/img/fti.jpg" alt="logo fti unai" class="w-6 rounded-full"></a>
+            <a href="https://unai.edu/"><img src="src/img/unai2.jpg" alt="logo unai" class="w-6 rounded-full"></a>
+            <a href="https://jurnal.unai.edu/index.php/teika"><img src="src/img/unai.jpg" alt="logo unai monochrome" class="w-6 rounded-full"></a>
+            <a href="https://www.youtube.com/@snpmbbppp"><img src="src/img/yt.jpg" alt="logo yt" class="w-6 rounded-full"></a>
+        </div>
+    </div>
+</footer>
+	
+</body>
+</html>

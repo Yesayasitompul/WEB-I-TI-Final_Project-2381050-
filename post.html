@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://kit.fontawesome.com/ba0c18136f.js" crossorigin="anonymous"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdn.tailwindcss.com"></script>
+	<title>Beranda | Seleksi Nasional Penerimaan Mahasiswa Baru</title>	
+	<link rel="icon" href="AssetWeb/Gambar/tutwuri-logo.png">
+</head>
+<body class="bg-white bg-[url('src/img/homepagebg.jpg')] bg-[50%_100%] bg-no-repeat bg-cover bg-fixed">
+	<aside class="absolute h-full z-10">
+		<input type="checkbox" id="sidebar-toggle" class="hidden peer" />
+		<div class="fixed top-0 left-0 h-full w-[400px] bg-gray-100 text-white transform -translate-x-full peer-checked:translate-x-0 transition-transform duration-300 z-50 peer-checked:shadow-[5px_0px_100px_rgb(200,200,200,0.45)]">
+		<ul class="mt-8 space-y-4 text-lg w-[90%] mx-auto">
+			<li><h2 class="text-black text-2xl border-b-[3px] border-solid border-[#2e5c98] font-semibold w-fit pr-3 ml-6 pb-2">Menu</h2></li>
+			<li><input class="w-[95%] ml-2 pl-3 py-2 rounded-sm my-4" type="text" name="search" id="search" placeholder="Search..."></li>
+			<li class="px-6 py-2 cursor-pointer text-black"><a href="index.html">Beranda</a></li>
+			<li class="px-6 py-2 cursor-pointer text-black"><a href="biodata.html">Biodata</a></li>
+			<li class="px-6 py-2 cursor-pointer text-black"><a href="contact_us.html">Contact Us</a></li>
+			<li class="px-6 py-2 cursor-pointer text-black"><a href="mypleasure.html">My Pleasure</a></li>
+			<li class="px-6 py-2 cursor-pointer text-[#2e5c98] font-semibold border-b-[1px] border-solid border-[#2e5c98]"><a href="post.html">Post</a></li>
+			<li class="px-6 py-2 cursor-pointer text-black">Jadwal</li>
+			<li class="px-6 py-2 cursor-pointer text-black">Unduhan</li>
+			<li class="px-6 py-2 cursor-pointer text-black">Info Terkini</li>
+			<li class="px-6 py-2 cursor-pointer text-black">FAQ</li>
+			<li class="px-6 py-2 cursor-pointer text-black">Tautan</li>
+		</ul>
+		</div>
+	
+		<div class="ml-0 peer-checked:ml-[420px] transition-all duration-300 pt-10">
+		<label for="sidebar-toggle" class="p-6 bg-transparent text-[#2e5c98] font-semibold text-4xl scale-50 m-4 rounded cursor-pointer">☰</label>
+		</div>
+	  </aside>
+
+      <main class="flex justify-center items-center min-h-screen">
+        <div id="postCard" class="hidden bg-white shadow-lg rounded-xl p-6 max-w-md w-full border-2 border-[#2e5c98]">
+            <div id="loading" class="text-center text-black font-bold">
+                Loading post details...
+            </div>
+        </div>
+    
+        <script>
+            // Fetch post data
+            fetch('https://jsonplaceholder.typicode.com/posts/50')
+                .then(response => response.json())
+                .then(post => {
+                    // Hide loading
+                    document.getElementById('loading').style.display = 'none';
+    
+                    // Create post card content
+                    const postCard = document.getElementById('postCard');
+                    postCard.innerHTML = `
+                        <div class="mb-4">
+                            <h2 class="text-2xl font-bold text-[#2e5c98] mb-4 border-b-2 border-[#2e5c98] pb-2">
+                                Post Details
+                            </h2>
+                            <div class="bg-[#2e5c98] bg-opacity-10 p-3 rounded-md mb-3">
+                                <p class="text-black">
+                                    <span class="font-semibold text-[#2e5c98]">Post ID:</span> 
+                                    ${post.id}
+                                </p>
+                            </div>
+                            <div class="bg-[#2e5c98] bg-opacity-10 p-3 rounded-md mb-3">
+                                <h3 class="font-semibold text-[#2e5c98] mb-1">Title</h3>
+                                <p class="text-black">${post.title}</p>
+                            </div>
+                            <div class="bg-[#2e5c98] bg-opacity-10 p-3 rounded-md">
+                                <h3 class="font-semibold text-[#2e5c98] mb-1">Body</h3>
+                                <p class="text-black">${post.body}</p>
+                            </div>
+                        </div>
+                    `;
+    
+                    // Show post card
+                    postCard.classList.remove('hidden');
+                })
+                .catch(error => {
+                    // Handle any errors
+                    const postCard = document.getElementById('postCard');
+                    postCard.innerHTML = `
+                        <div class="text-red-500 font-bold">
+                            Error loading post: ${error.message}
+                        </div>
+                    `;
+                    postCard.classList.remove('hidden');
+                });
+        </script>
+      </main>
+	
+
+	<footer class="bg-[#2e5c98] border-t border-solid border-[blue] py-2">
+		<div class="footer-content container mx-auto grid grid-cols-1 grid-rows-5 h-40 lg:h-32 justify-center text-center text-white">
+			<h3 class="text-xl font-medium">Seleksi Nasional Penerimaan Mahasiswa Baru</h3>
+			<p class="text-[12px]">Gedung D lt.2, Kemdikbudristek Jl. Pintu I Senayan, Jakarta 10270</p>
+			<p class="text-[12px]">Telp. (021) 3104041 Email: snpmb@bppp.kemdikbud.go.id; halo-snpmb@bppp.kemdikbud.go.id</p>
+			<a href="#" class="kebijakan text-white text-xs underline decoration-dotted">Kebijakan Privasi</a>
+			<div class="logo-wrapper flex justify-center gap-3">
+				<a href="https://x.com/snpmb_bppp?mx=2"><img src="src/img/x.jpg" alt="logo instagram" class="w-6 rounded-full"></a>
+				<a href="https://fti.unai.edu/"><img src="src/img/fti.jpg" alt="logo fti unai" class="w-6 rounded-full"></a>
+				<a href="https://unai.edu/"><img src="src/img/unai2.jpg" alt="logo unai" class="w-6 rounded-full"></a>
+				<a href="https://jurnal.unai.edu/index.php/teika"><img src="src/img/unai.jpg" alt="logo unai monochrome" class="w-6 rounded-full"></a>
+				<a href="https://www.youtube.com/@snpmbbppp"><img src="src/img/yt.jpg" alt="logo yt" class="w-6 rounded-full"></a>
+			</div>
+		</div>
+	</footer>
+		
+</body>
+</html>
